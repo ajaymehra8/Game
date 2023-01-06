@@ -1,0 +1,83 @@
+*{
+  margin:0;
+  padding:0;
+  
+}
+body{
+ background-image:url("https://cdn1.vectorstock.com/i/1000x1000/87/40/neon-future-game-pad-background-vector-35068740.jpg");
+  background-size:1200px;
+ 
+  text-align:center;
+ font-family: 'East Sea Dokdo', cursive;
+  font-size:2rem;
+}
+nav{
+text-align:center;
+  margin-top:20px;
+  
+}
+.nav-head{
+  color: #4ECCA3;
+  font-size:8vw;
+  text-shadow:4px 4px blue;
+}
+
+.first-div{
+  margin-top:50px;
+    display: grid;
+  justify-items: center;}
+span{
+  color:pink;
+  align-self:center;
+  font-size:70px;
+  
+  padding:9px 20px;
+  
+  
+  
+}
+.rightB{
+  border-right:solid red;
+}
+.game1,.game2,.game3{
+  
+  width:249px;
+}
+.game1,.game2{
+  border-bottom:solid red;
+}
+.first-block{
+  border-right:solid red;
+}
+@media(max-width:750px){
+  .first-div{
+    margin-top:100px;
+  }
+  body{
+    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo6vUImqeCay9omDh1q9DCx3SbdFgUEdnDEA&usqp=CAU");
+  }
+  span{
+    color:pink;
+    font-size:40px;
+  }
+  .game1,.game2,.game3{
+  
+  width:209px;
+}
+  .nav-head{
+    font-size:3rem;
+  }
+}
+@media(max-width:400px){
+  
+   span{
+    color:pink;
+    font-size:20px;
+     padding-top:15px;
+  }
+  
+  .game1,.game2,.game3{
+  
+  width:180px;
+}
+}
