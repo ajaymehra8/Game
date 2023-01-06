@@ -58,26 +58,14 @@ span{
   }
   span{
     color:pink;
-    font-size:40px;
+    font-size:80px;
+    padding-top:15px;
   }
   .game1,.game2,.game3{
   
-  width:209px;
+  width:250px;
 }
   .nav-head{
     font-size:3rem;
   }
-}
-@media(max-width:400px){
-  
-   span{
-    color:pink;
-    font-size:40px;
-     padding-top:15px;
-  }
-  
-  .game1,.game2,.game3{
-  
-  width:200px;
-}
 }
