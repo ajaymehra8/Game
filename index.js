@@ -20,7 +20,7 @@ let boxTexts =document.getElementsByClassName("boxText");
   if(boxTexts[e[0]].innerText=== boxTexts[e[1]].innerText &&   boxTexts[e[2]].innerText=== boxTexts[e[1]].innerText &&  boxTexts[e[0]].innerText!=""){
    isGameover=true; document.querySelector(".win").innerText=boxTexts[e[0]].innerText+" won.";
  document.querySelector(".line").style.width="20vw";  
-    document.querySelector(".line").style.transform='translate(($e[3])vw,($e[4])vw) rotate( ($e[5])deg)';
+    document.querySelector(".line").style.transform=`translate(($e[3])vw,($e[4])vw) rotate( ($e[5])deg)`;
   }
   })
 }
