@@ -3,7 +3,7 @@ let clicked=false;
 let turn="X";
 
 let clickAudio=new Audio("https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-jump-coin-216.mp3");
-let winAudio=new Audio(""https://assets.mixkit.co/sfx/preview/mixkit-cheering-crowd-loud-whistle-610.mp3");
+let winAudio=new Audio("https://assets.mixkit.co/sfx/preview/mixkit-cheering-crowd-loud-whistle-610.mp3");
 let isGameover=false;
 const changeTurn =() =>{
   return turn==="X"?"0" :"X"
