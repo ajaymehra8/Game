@@ -1,4 +1,9 @@
+ let k=true;
+let clicked=false;
 let turn="X";
+
+let clickAudio=new Audio("https://assets.mixkit.co/sfx/preview/mixkit-arcade-game-jump-coin-216.mp3");
+let winAudio=new Audio("https://assets.mixkit.co/sfx/preview/mixkit-wind-chimes-2014.mp3");
 let isGameover=false;
 const changeTurn =() =>{
   return turn==="X"?"0" :"X"
@@ -13,14 +18,20 @@ let boxTexts =document.getElementsByClassName("boxText");
     [0,3,6,-5,15,90],
     [1,4,7,5,15,90],
     [2,5,8,15,15,90],
-    [0,4,8,5,15,45],
+    [0,4,8,5,12,40],
     [2,4,6,5,15,135]
   ]
   wins.forEach(e=>{
   if(boxTexts[e[0]].innerText=== boxTexts[e[1]].innerText &&   boxTexts[e[2]].innerText=== boxTexts[e[1]].innerText &&  boxTexts[e[0]].innerText!=""){
-   isGameover=true; document.querySelector(".win").innerText=boxTexts[e[0]].innerText+" won.";
- document.querySelector(".line").style.width="20vw";  
-    document.querySelector(".line").style.transform=`translate(($e[3])vw,($e[4])vw) rotate( ($e[5])deg)`;
+     document.querySelector(".typed-out").innerText=boxTexts[e[0]].innerText+" is winner.";
+      document.querySelector(".main-head").style.display="none";
+    
+   
+     document.querySelector(".turn").innerText="";
+
+   winAudio.play(); document.querySelector(".line").style.transform=`translate(${e[3]}vw,${e[4]}vw) rotate( ${e[5]}deg)`;
+    if(clicked==false){
+    setTimeout("reset()",13000);}
   }
   })
 }
@@ -28,14 +39,18 @@ let boxTexts =document.getElementsByClassName("boxText");
 let boxes=document.getElementsByClassName("box");
   
 Array.from(boxes).forEach(element=>{
-  
+ 
   let boxText=element.querySelector(".boxText");
   
   element.addEventListener("click",()=>{
-  
+    if(k==true){
+  turn="0";
+    k=false;}
     if(element.innerText===""){
+      clickAudio.play();
+       document.querySelector(".turn").innerText="Turn: "+ turn;
        if(isGameover!=true){
- document.querySelector(".turn").innerText="Turn: "+ turn;}
+}
        turn=changeTurn();
      
     boxText.innerText=turn;
@@ -50,8 +65,17 @@ Array.from(boxes).forEach(element=>{
 // resett
 let resett=document.querySelector(".resett");
 resett.addEventListener("click",()=>{
-  let boxTexts=document.querySelectorAll(".boxText");
+reset();
+                        })
+function reset(){
+    let boxTexts=document.querySelectorAll(".boxText");
 Array.from(boxTexts).forEach(element=>{
   element.innerText="";
+k=true;
+   document.querySelector(".turn").innerText="Turn: X";
+  document.querySelector(".typed-out").innerText="";
+  document.querySelector(".main-head").style.display="inherit";
+  clicked=true;
+
 });
-                        })
+}
