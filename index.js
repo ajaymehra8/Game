@@ -29,8 +29,10 @@ let boxTexts =document.getElementsByClassName("boxText");
    
      document.querySelector(".turn").innerText="";
 
-   winAudio.play(); document.querySelector(".line").style.transform=`translate(${e[3]}vw,${e[4]}vw) rotate( ${e[5]}deg)`;
-    if(clicked==false){
+   winAudio.play(); 
+  
+    document.querySelector(".line").style.transform=`translate(${e[3]}vw,${e[4]}vw) rotate( ${e[5]}deg)`;
+    if(clicked===false){
     setTimeout("reset()",13000);}
   }
   })
