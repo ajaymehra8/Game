@@ -5,18 +5,42 @@
 }
 body{
  background-image:url("https://cdn1.vectorstock.com/i/1000x1000/87/40/neon-future-game-pad-background-vector-35068740.jpg");
-  background-size:1200px;
+  background-size:1500px;
  
   text-align:center;
  font-family: 'East Sea Dokdo', cursive;
 
 }
 nav{
+  display:flex;
 text-align:center;
-  margin-top:20px;
+  background-color:black;
+  padding-top:10px;
+
   
 }
 .nav-head{
+font-size:2rem;
+  padding-top:-10px;
+  margin-left:10px;
+  color:white;
+  letter-spacing:2px;
+}
+ul{
+  position:absolute;
+  padding-top:-10px;
+  right:10px;
+  color:white;
+  
+   list-style:none;
+  font-size:1.5rem;
+  display:flex;
+  gap:20px;
+}
+li{
+
+}
+.main-head{
   color: #4ECCA3;
   font-size:8vw;
   text-shadow:4px 4px blue;
@@ -28,23 +52,78 @@ display:flex;
   justify-content:center;
   margin-top:70px;
     }
-
+@media(max-width:1200px){
+  body{
+    background-size:100% 200%;
+  }
+  
+}
+@media(max-width:700px){
+  .linex{
+    width:10vw !important;
+    background-color:red !important;
+  }}
 @media(max-width:750px){
+ 
+  .nav-head{
+    font-size:1.5rem;
+  }
   .first-div{
     margin-top:100px;
   }
-  body{
-    background-image:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo6vUImqeCay9omDh1q9DCx3SbdFgUEdnDEA&usqp=CAU");
+ 
+  .win-lose{
+    top:130px;
   }
  
  
-  .nav-head{
+  .main-head{
     font-size:3rem;
   }
 }
+@media(min-width:1000px){
+  .container{
+   grid-template-columns:repeat(3 ,80px) !important;
+    grid-templates-rows:repeat(3 ,100px) !important;}
+  .box{
+    font-size:70px !important;
+  }}
+@media(max-width:600px){
+   body{
+    background-size:100% 200%;
+  }}
+@media(max-width:270px){
+  .first-div{
+    margin-top:100px;
+  }
+  .main-head{
+    font-size:50px !important;
+  }
+}
 @media(max-width:400px){
-  
- 
+   body{
+    background-size:125% 200%;
+}
+  .container{
+   grid-template-columns:repeat(3 ,50px) !important;
+    grid-templates-rows:repeat(3 ,50px) !important;}
+  .box{
+    font-size:40px !important;
+  }
+  ul{
+    display:none;
+  }
+  .win-lose{
+    font-size:20px !important;
+   left:15px !important;
+    
+  }
+  .resett{
+    font-size:15px !important;
+  }
+  .main-head{
+    font-size:70px ;
+  }
   
   
 }
@@ -52,8 +131,8 @@ display:flex;
   position:relative;
   display:grid;
  margin-top:2px;
-  grid-template-columns:repeat(3 ,10vw);
-    grid-templates-rows:repeat(3 ,10vw);
+  grid-template-columns:repeat(3 ,8vw);
+    grid-templates-rows:repeat(3 ,9vw);
 
 
 }
@@ -87,13 +166,12 @@ border-top:0;}
 border-bottom:0;}
 .win-lose{
   color:red;
-  font-size:3vw;
+  font-size:2.5vw;
+  font-weight:400!important;
   position:absolute;
-  left:20px;
+  left:15vw;
 }
-.win{
 
-}
 
 .turn{
   top:70px;
@@ -103,6 +181,48 @@ border-bottom:0;}
   width:0;
   transition:width 1s ease-in-out;
   height:3px;
-  position:absolute;
   
+  position:absolute;
+
+  
+}
+.linex{
+  width:20vw;
+}
+.resett{
+  padding:1px 10px 2px;
+  font-size:1.5vw;
+  color:;
+border:none;
+  border-radius:10px;
+  background-color:pink;
+  font-weight:900;
+  letter-spacing:1px;
+  
+}
+
+.McontainerX{
+  display:inherit;
+}
+.Mcontainer {
+  postion:absolute;
+  left:0px;
+  top:0px;
+
+  
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 40% }
+}
+.typed-out{
+    overflow: hidden;
+   color:skyblue;
+   text-shadow:4px 4px blue;
+    white-space: nowrap;
+  margin:0 auto;
+    font-size:10vw;
+    width: 0;
+     animation: 
+    typing 20s steps(150, end) forwards;;
 }
