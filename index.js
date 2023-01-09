@@ -28,12 +28,13 @@ let boxTexts =document.getElementsByClassName("boxText");
     
    
      document.querySelector(".turn").innerText="";
-
+   winAudio.load();
    winAudio.play(); 
-  
+   document.querySelector(".typed-out").style. animation="typing 20s steps(150, end) forwards";
     document.querySelector(".line").style.transform=`translate(${e[3]}vw,${e[4]}vw) rotate( ${e[5]}deg)`;
+    clicked=false;
     if(clicked===false){
-    setTimeout("reset()",13000);}
+    setTimeout("reset()",15000);}
   }
   })
 }
@@ -78,6 +79,8 @@ k=true;
   document.querySelector(".typed-out").innerText="";
   document.querySelector(".main-head").style.display="inherit";
   clicked=true;
+  winAudio.pause();
+    document.querySelector(".typed-out").style. animation="none";
 
 });
 }
