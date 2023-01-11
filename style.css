@@ -6,6 +6,7 @@
 body{
  background-image:url("https://cdn1.vectorstock.com/i/1000x1000/87/40/neon-future-game-pad-background-vector-35068740.jpg");
   background-size:1500px;
+  background-repeat:no-repeat;
  
   text-align:center;
  font-family: 'East Sea Dokdo', cursive;
